@@ -4,7 +4,8 @@
         "twig/twig": "^3.8",
         "illuminate/database": "^10.42",
         "vlucas/valitron": "^1.4",
-        "illuminate/events": "^10.43"
+        "illuminate/events": "^10.43",
+        "symfony/http-kernel": "^7.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^7.0",
