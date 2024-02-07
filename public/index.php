@@ -2,17 +2,6 @@
 
 // Front controller (toutes les requêtes passent par ici)
 
-// Connexion pour MySQL avec Laragon
-$pdo = new PDO('mysql:host=localhost;dbname=mvc', 'root', '');
-
-//Requête pour exécuter la PDO
-$query = $pdo->query('SELECT * FROM users');
-$users = $query->fetchAll();
-
-echo '<pre>';
-var_dump($users);
-echo '</pre>';
-
 // Autoloader de Composer
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -28,3 +17,14 @@ $response = $router->dispatch();
 
 // On envoie la réponse à notre visiteur (https://symfony.com/doc/current/components/http_foundation.html#sending-the-response)
 $response->send();
+
+// Connexion pour MySQL avec Laragon
+$pdo = new PDO('mysql:host=localhost;dbname=mvc', 'root', '');
+
+//Requête pour exécuter la PDO
+$query = $pdo->query('SELECT * FROM users');
+$users = $query->fetchAll();
+
+echo '<pre>';
+var_dump($users);
+echo '</pre>';
