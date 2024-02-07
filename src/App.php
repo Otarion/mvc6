@@ -39,6 +39,9 @@ class App
         // On enregistre le service twig
         $this->singleton('twig', fn(App $app) => new Twig());
 
+        //On enregistre le service eloquent
+        $this->singleton('eloquent', fn (App $app) => new Eloquent());
+
         // On enregistre le service router et on lui injecte le service request pour l'utiliser facilement depuis celui-ci
         $this->singleton('router', fn(App $app) => new Router(
             $app->make('request'),
